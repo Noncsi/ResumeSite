@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "Roboto Thin";
+  src:  url("fonts/Roboto-Thin.ttf")
+}
+
+@font-face {
+  font-family: "Roboto Bold";
+  src:  url("fonts/Roboto-Bold.ttf")
+}
+
+body {
+  display: flex;
+  color:#f1f1f1;
+  background-color: #202124;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-family: "Roboto Bold";
+  font-size: 80px;
+}
+
+h2 {
+  font-family: "Roboto Thin";
+  font-size: 50px;
+}
+
+img {
+  width: 500px;
+  border-radius: 69% 31% 39% 61% / 46% 48% 52% 54% ;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.container {
+  margin: 7vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.column {
+  margin: 2vw;
+}
