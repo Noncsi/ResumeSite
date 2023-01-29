@@ -61,7 +61,7 @@ function App() {
           </div>
         </div>
 
-        <h4 style={{textAlign:"center"}}>References</h4>
+        <h4 style={{textAlign:"center"}}>References (Work in progess)</h4>
         <div className="references">
           <a target="_blank" rel="noreferrer" href='https://int-elligence.azurewebsites.net/'>
             <img className='reference' src={referenceIntelligence} alt="Int elligence;"></img>
