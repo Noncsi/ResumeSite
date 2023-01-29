@@ -8,6 +8,13 @@
   src:  url("fonts/Roboto-Bold.ttf")
 }
 
+html, body {
+  height: 200%;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Thin";
+}
+
 body {
   display: flex;
   color:#f1f1f1;
@@ -16,33 +23,161 @@ body {
 
 #root {
   width: 100%;
-  display: flex;
-  justify-content: center;
 }
 
 h1 {
   font-family: "Roboto Bold";
-  font-size: 80px;
+  font-size: 70px;
+  margin: 0;
+  margin-bottom: 20px;
 }
 
 h2 {
-  font-family: "Roboto Thin";
-  font-size: 50px;
+  font-size: 60px;
+  margin: 0;
+}
+
+h3 {
+  font-size: 35px;
+  margin: 0 10px 0 10px;
+}
+
+h4 {
+  font-size: 20px;
+  margin: 0 10px 0 10px;
+}
+
+h5 {
+  font-size: 16px;
+  margin: 0 10px 0 10px;
+}
+
+p {
+  font-weight: 100;
 }
 
 img {
-  width: 500px;
-  border-radius: 69% 31% 39% 61% / 46% 48% 52% 54% ;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  width: 400px;
 }
 
-.container {
-  margin: 7vw;
+.asd {
+  height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.content {
+  height: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+}
+
+.intr-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 140px 4vw 0 4vw;
 }
 
 .column {
-  margin: 2vw;
+  margin: 33px 0 33px 0
+}
+
+.column:nth-child(2) {
+  position: relative;
+}
+
+.name-container {
+  margin: 40px 0 80px 0;
+}
+
+.under-line {
+  background-color: #F6E0AC;
+  height: 2px;
+}
+
+.yellow-text {
+  color: #d1e07c;
+}
+
+.side-line {
+  background-color: #F6E0AC;
+  width: 114px;
+  padding: 5px;
+  text-align: center;
+  padding-top: 200px;
+}
+
+.contacts {
+  text-align: center;
+}
+
+a {
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.description {
+  margin-top: 70px;
+  max-width: 550px;
+}
+
+.line-decoration {
+  position: absolute;
+  background-color: #681379;
+  width: 65vw;
+  min-width: 500px;
+  height: 3px;
+  top: 336px;
+  z-index: -1;
+  left: 18vw;
+}
+
+.experience {
+  position: absolute;
+  z-index: 2;
+  top: 350px;
+  left: -50px;
+  background-color: #202124;
+  width: 100px;
+  height: 100px;
+  border: 3px solid #681379;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  font-family: 'Roboto Thin';
+  background-color: #681379;
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  width: 235px;
+  top: 100%;
+  margin-left: -135px;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+}
+
+.tooltip:active .tooltip-text {
+  background-color: #450952;
+}
+
+.references {
+  display: flex;
+  justify-content: center;
+}
+
+.reference {
+  width: 250px;
+  border: white 2px solid;
 }

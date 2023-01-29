@@ -1,0 +1,155 @@
+.glitching-image-container {
+  border: #681379 3px solid;
+	position: relative;
+	overflow: hidden;
+}
+
+.glitching-image-container img {
+	position: relative;
+	z-index: 1;
+	display: block;
+  animation: glitch-anim-img 5s infinite linear;
+}
+
+.glitch_layers {
+	position: absolute;
+	z-index: 2;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.glitch_layer {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-image: url(../images/profile_pic.png);
+	background-repeat: no-repeat;
+  background-size: 423px;
+}
+
+.glitch_layer:nth-child(1) {
+	animation: glitch-anim-1 1.5s infinite cubic-bezier(0, 0, 1, -0.28) alternate;
+}
+
+.glitch_layer:nth-child(2) {
+	animation: glitch-anim-2 5s infinite cubic-bezier(0,-0.35, 0, 1.11) alternate;
+}
+
+.glitch_layer:nth-child(3) {
+	animation: glitch-anim-3 3s infinite cubic-bezier(0.4, 1.43, 1,-0.29) alternate;
+}
+
+.glitch_layer:nth-child(4) {
+	animation: glitch-anim-4 3s infinite cubic-bezier(0.4, 1.43, 1,-0.29);
+}
+
+.glitch_layer:nth-child(5) {
+	animation: glitch-anim-5 0.5s infinite cubic-bezier(0.4, 1.43, 1,-0.29);
+}
+
+.glitch_layer:nth-child(6) {
+	animation: glitch-anim-flash 1s infinite linear;
+}
+
+@keyframes glitch-anim-1 {
+	0% {
+    opacity:1;
+		clip-path: polygon(0 16%, 41% 16%, 41% 21%, 0 21%);
+	}
+  1% {
+    opacity:0;
+		clip-path: polygon(0 34%, 39% 34%, 39% 40%, 0 40%);
+	}
+
+}
+@keyframes glitch-anim-2 {
+	0% {
+		clip-path: polygon(0 2%, 100% 2%, 100% 12%, 0 12%);
+	}
+  100% {
+		clip-path: polygon(0 97%, 99% 97%, 99% 99%, 0 99%);
+	}
+}
+
+@keyframes glitch-anim-3 {
+	0% {
+    
+		clip-path: polygon(0% 5%, 100% 5%, 100% 10%, 0% 10%);
+  }
+  50% {
+    display:block;
+		clip-path: polygon(0% 70%, 100% 70%, 100% 75%, 0% 75%);
+  }
+  52% {
+    display:none;
+		clip-path: polygon(0% 70%, 100% 70%, 100% 75%, 0% 75%);
+  }
+  55% {
+    display:block;
+		clip-path: polygon(0% 70%, 100% 70%, 100% 75%, 0% 75%);
+  }
+  100% {
+		clip-path: polygon(0% 5%, 100% 5%, 100% 10%, 0% 10%);
+  }
+}
+
+@keyframes glitch-anim-4 {
+	0% {
+		clip-path: polygon(0% 50%, 70% 50%, 70% 51%, 0% 51%);
+  }
+  50% {
+		clip-path: polygon(0% 50%, 30% 50%, 30% 51%, 0% 51%);
+  }
+  100% {
+		clip-path: polygon(0% 50%, 30% 50%, 30% 51%, 0% 51%);
+  }
+}
+
+@keyframes glitch-anim-5 {
+	0% {
+    display: none;
+		clip-path: polygon(60% 70%, 100% 70%, 100% 72%, 60% 72%);
+  }
+  50% {
+		clip-path: polygon(0% 70%, 100% 70%, 100% 72%, 0% 72%);
+  }
+  100% {
+    display: block;
+		clip-path:polygon(40% 70%, 100% 70%, 100% 72%, 40% 72%);
+  }
+}
+
+@keyframes glitch-anim-img {
+  1% {
+    transform: scaleY(5);
+	}
+  3% {
+    transform: scaleY(1);
+	}
+  50% {
+    transform: scaleX(1);
+  }
+  51% {
+    transform: scaleX(5);
+	}
+  53% {
+    transform: scaleX(1);
+	}
+  54% {
+    transform: scaleY(1);
+	}
+
+}
+
+@keyframes glitch-anim-flash {
+	0% {
+		opacity: .2;
+	}
+	30%, 100% {
+		opacity: 0;
+	}
+}
